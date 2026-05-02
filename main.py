@@ -57,6 +57,11 @@ def get_entrenamiento(id_plan:int):
     entrenamiento={"id":id_plan, "ejercicio":"Correr", "duracion":"30 minutos"}
     return entrenamiento
 
+@entrenamiento_router.get("/entrenamientos")
+def get_entrenamientos():
+    entrenamientos =[{"id":1,"ejercicio":"Nadar","tiempo":3,"kilometros":2.5}]
+    return entrenamientos
+
 # Incluir routers en la aplicación principal
 app.include_router(general_router)
 app.include_router(atleta_router)
