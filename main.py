@@ -59,7 +59,12 @@ def get_entrenamiento(id_plan:int):
 
 @entrenamiento_router.get("/entrenamientos")
 def get_entrenamientos():
-    entrenamientos =[{"id":1,"ejercicio":"Nadar","tiempo":3,"kilometros":2.5}]
+    entrenamientos =[{"id":1,"ejercicio":"Nadar","tiempo":"0:30","kilometros":2.5},
+                     {"id":2,"ejercicio":"Correr","tiempo":"0:45","kilometros":5},
+                    {"id":3,"ejercicio":"Ciclismo","tiempo":"1:30","kilometros":40},
+                    {"id":4,"ejercicio":"Yoga","tiempo":"0:30","kilometros":0},
+                    {"id":5,"ejercicio":"Pesas","tiempo":"0:30","kilometros":0},
+                    {"id":6,"ejercicio":"HIIT","tiempo":"0:30","kilometros":0}]
     return entrenamientos
 
 # Incluir routers en la aplicación principal
